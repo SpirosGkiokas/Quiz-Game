@@ -3,8 +3,7 @@ class error_screen_data_missing():
     def __init__(self, game_frame, background):
         self.game_frame = game_frame
         self.Error_Canvas = Canvas(self.game_frame)
-        self.Error_Canvas.create_image( 0, 0, image = background,  
-                            anchor = "nw")
+        self.Error_Canvas.config(background="#002b87")
         self.Error_Canvas.create_text(960,400,text="Error: Important Files Not Found", fill="White",
                                       font=("Arial", 40, "bold"))
         self.Error_Canvas.create_text(960,480,text="Please Try Installing The Game Again", fill="White",
@@ -663,9 +662,7 @@ def close_app():
 #importing libs
 from tkinter import *
 import random
-import time
 import os
-import sys
 import ctypes
 from Data.QuestionData.questions import *
 
